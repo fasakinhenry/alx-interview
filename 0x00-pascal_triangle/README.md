@@ -2,14 +2,44 @@
 
 `Algorithm` `Python` `Encapsulation`
 
-## General Requirements
+Pascal's Triangle is a triangular array of numbers where each number is the sum of the two numbers directly above it. The triangle starts with a single 1 at the top, and each subsequent row contains one more element than the previous row.
 
-- Allowed editors: `vi`, `vim`, `emacs`
-- Files would be interpreted/compiled on Ubuntu 14.04 LTS using `python3` (version 3.4.3)
-- First line of each python file should be shebang `#!/usr/bin/python3`
-- `README.md` file at root of repository and in every directory is mandatory
-- Code should be documented and should use `PEP 8` style (version 1.7.x)
-- Files must be executable
+Here is a step-by-step description of how Pascal's Triangle is constructed:
+
+1. **First Row**: The first row contains a single element, which is 1.
+2. **Subsequent Rows**: Each subsequent row starts and ends with 1. Each interior element is the sum of the two elements directly above it from the previous row.
+
+For example, the first few rows of Pascal's Triangle look like this:
+
+```
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+```
+Properties of Pascal's Triangle:
+
+- **Symmetry**: Each row is symmetric.
+- **Binomial Coefficients**: The elements of the nth row correspond to the coefficients of the binomial expansion ((a + b)^n).
+- **Sum of Rows**: The sum of the elements in the nth row is (2^n).
+
+Problem Statement:
+Create a function def pascal_triangle(n): that returns a list of lists of integers representing the Pascal’s triangle of n:
+
+If n <= 0, return an empty list.
+Assume n is always an integer.
+Example:
+For n = 5, the function should return:
+```
+[
+ [1],
+ [1, 1],
+ [1, 2, 1],
+ [1, 3, 3, 1],
+ [1, 4, 6, 4, 1]
+]
+```
 
 ## Tasks
 
